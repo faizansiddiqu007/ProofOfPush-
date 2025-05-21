@@ -1,10 +1,6 @@
-# ProofOfPush ![MIT](https://img.shields.io/badge/License-MIT-green) ![Build](https://img.shields.io/github/actions/workflow/status/ProofOfPush/ProofOfPush/ci.yml)
-
-
-
 # ProofOfPush
 
-> **Tagline:** *“Show, don’t just tell — prove every résumé claim with real GitHub pushes.”*
+> *“Show, don’t just tell — prove every résumé claim with real GitHub pushes.”*
 
 ![MIT](https://img.shields.io/badge/License-MIT-green) ![Status](https://img.shields.io/badge/status-alpha-orange)
 
@@ -26,7 +22,7 @@ A self-service, open-source verifier that **matches résumé statements with pub
 
 ---
 
-## 4. MVP Feature Set
+## 3. MVP Feature Set
 
 1. **Résumé Parser** – spaCy / OpenAI to pull skills & project claims.
 2. **GitHub Analyzer** – Aggregate language stats, commit volume, PR merges, issue activity.
@@ -36,7 +32,7 @@ A self-service, open-source verifier that **matches résumé statements with pub
 
 ---
 
-## 5. Tech Stack
+## 4. Tech Stack
 
 | Layer    | Tech                                          |
 | -------- | --------------------------------------------- |
@@ -49,23 +45,20 @@ A self-service, open-source verifier that **matches résumé statements with pub
 
 ---
 
-## 6. Architecture Sketch
+## 5. Architecture Sketch
 
-```mermaid
-autocomplete off
 flowchart LR
-  U(User) --> FE(React_UI)
-  FE --> API(FastAPI)
-  API --> GH[GitHub_API]
-  API --> NLP[NLP_Service]
-  API --> DB[(PostgreSQL)]
-  API --> CACHE[(Redis)]
-  DB --> FE
-```
+  user(User) --> fe[React UI]
+  fe --> api[FastAPI]
+  api --> gh[GitHub API]
+  api --> nlp[NLP Service]
+  api --> db[(PostgreSQL)]
+  api --> cache[(Redis)]
+  db --> fe
 
 ---
 
-## 9. Open Questions
+## 6. Open Questions
 
 1. How do we fairly weight private experience vs. public activity?
 2. What’s the optimal scoring formula (heuristics vs. LLM weighting)?
@@ -73,7 +66,7 @@ flowchart LR
 
 ---
 
-## 10. License
+## 7. License
 
 This project is licensed under the **MIT License** – permissive for startups & recruiters; attribution via badge appreciated.
 
