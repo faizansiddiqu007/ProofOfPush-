@@ -39,26 +39,14 @@ A self-service, open-source verifier that **matches résumé statements with pub
 | Backend  | Python 3.12, FastAPI, PostgreSQL (audit logs) |
 | Data     | GitHub REST/GraphQL, Redis cache              |
 | NLP      | spaCy + OpenAI (gpt-4o)                       |
-| Frontend | React + Tailwind (Vite)                       |
+| Frontend | Streamlit                                     |
 | CI/CD    | GitHub Actions → Fly.io / AWS                 |
 | Docs     | MkDocs + Material theme                       |
 
 ---
 
-## 5. Architecture Sketch
 
-flowchart LR
-  user(User) --> fe[React UI]
-  fe --> api[FastAPI]
-  api --> gh[GitHub API]
-  api --> nlp[NLP Service]
-  api --> db[(PostgreSQL)]
-  api --> cache[(Redis)]
-  db --> fe
-
----
-
-## 6. Open Questions
+## 5. Open Questions
 
 1. How do we fairly weight private experience vs. public activity?
 2. What’s the optimal scoring formula (heuristics vs. LLM weighting)?
@@ -66,18 +54,9 @@ flowchart LR
 
 ---
 
-## 7. License
+## 6. License
 
 This project is licensed under the **MIT License** – permissive for startups & recruiters; attribution via badge appreciated.
 
 ---
-
-### Next Steps
-
-1. **Create GitHub org/repo** named `ProofOfPush`.
-2. Drop this doc in **README.md** (until we split docs folder).
-3. Open issues for each MVP component.
-4. Announce on LinkedIn & HackerNews → *“Show HN: ProofOfPush – résumé claims backed by GitHub pushes.”*
-
-Ready
 
